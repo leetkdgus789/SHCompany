@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0"
+	prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="control.SalController"
+	style="-fx-background-color:#FFFFFF">
+	<children>
+		<ImageView layoutX="1280" layoutY="50" pickOnBounds="true"
+			preserveRatio="true">
+			<image >
+				<Image url="@../images/logo.png" />
+			</image>
+		</ImageView>
+		<Label alignment="CENTER" layoutX="30.0" layoutY="15.0"
+			prefHeight="30.0" prefWidth="150.0" text="사원 급여리스트">
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Label>
+		<Label alignment="CENTER" layoutX="25.0" layoutY="50.0"
+			prefHeight="25.0" prefWidth="80.0" text="귀속년월">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtYear" layoutX="145.0" layoutY="50.0"
+			prefHeight="25.0" prefWidth="100.0" />
+		<Label alignment="CENTER" layoutX="245.0" layoutY="50.0"
+			prefHeight="25.0" prefWidth="30.0" text="년">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label alignment="CENTER" layoutX="395.0" layoutY="50.0"
+			prefHeight="25.0" prefWidth="30.0" text="월">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<ComboBox fx:id="cbMonth" layoutX="295.0" layoutY="50.0"
+			prefHeight="25.0" prefWidth="100.0" />
+		<Button fx:id="btnSalList" layoutX="470.0" layoutY="50.0"
+			mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0"
+			text="사원 불러오기" />
+		<TableView fx:id="tvInfo" layoutX="25.0" layoutY="90.0"
+			prefHeight="235.0" prefWidth="400.0">
+		</TableView>
+		<Label alignment="CENTER" layoutX="700.0" layoutY="90.0"
+			prefHeight="25.0" prefWidth="80.0" text="급여항목">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="700.0" layoutY="120.0" prefHeight="25.0"
+			prefWidth="80.0" text="기본급">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtBasepay" layoutX="780.0"
+			layoutY="120.0" prefHeight="25.0" prefWidth="125.0" />
+		<Label layoutX="700.0" layoutY="150.0" prefHeight="25.0"
+			prefWidth="80.0" text="상여">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtBonus" layoutX="780.0" layoutY="150.0"
+			prefHeight="25.0" prefWidth="125.0" />
+		<Label layoutX="700.0" layoutY="180.0" prefHeight="25.0"
+			prefWidth="80.0" text="연장수당">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtOverpay" layoutX="780.0"
+			layoutY="180.0" prefHeight="25.0" prefWidth="125.0" />
+		<Label layoutX="700.0" layoutY="300.0" prefHeight="25.0"
+			prefWidth="80.0" text="지급액">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtSumpay" layoutX="780.0" layoutY="300.0"
+			prefHeight="25.0" prefWidth="125.0" />
+		<Label alignment="CENTER" layoutX="920.0" layoutY="90.0"
+			prefHeight="25.0" prefWidth="80.0" text="공제항목">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="920.0" layoutY="120.0" prefHeight="25.0"
+			prefWidth="80.0" text="국민연금">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtPension" layoutX="1000.0"
+			layoutY="120.0" prefHeight="25.0" prefWidth="125.0" />
+		<Label layoutX="920.0" layoutY="150.0" prefHeight="25.0"
+			prefWidth="80.0" text="건강보험">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtHealth" layoutX="1000.0"
+			layoutY="150.0" prefHeight="25.0" prefWidth="125.0" />
+		<Label layoutX="920.0" layoutY="180.0" prefHeight="25.0"
+			prefWidth="80.0" text="고용보험">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtEmpment" layoutX="1000.0"
+			layoutY="180.0" prefHeight="25.0" prefWidth="125.0" />
+		<Label layoutX="920.0" layoutY="210.0" prefHeight="25.0"
+			prefWidth="80.0" text="소득세">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtWithtax" layoutX="1000.0"
+			layoutY="210.0" prefHeight="25.0" prefWidth="125.0" />
+		<Label layoutX="920.0" layoutY="240.0" prefHeight="25.0"
+			prefWidth="80.0" text="지방소득세">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtLocaltax" layoutX="1000.0"
+			layoutY="240.0" prefHeight="25.0" prefWidth="125.0" />
+		<Label layoutX="920.0" layoutY="270.0" prefHeight="25.0"
+			prefWidth="80.0" text="공제액">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtSumtax" layoutX="1000.0"
+			layoutY="270.0" prefHeight="25.0" prefWidth="125.0" />
+		<Label layoutX="920.0" layoutY="300.0" prefHeight="25.0"
+			prefWidth="80.0" text="차인지급액">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtActualpay" layoutX="1000.0"
+			layoutY="300.0" prefHeight="25.0" prefWidth="125.0" />
+		<Label alignment="CENTER" layoutX="803.0" layoutY="90.0"
+			prefHeight="25.0" prefWidth="80.0" text="지급금액">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label alignment="CENTER" layoutX="1023.0" layoutY="90.0"
+			prefHeight="25.0" prefWidth="80.0" text="지급금액">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Button fx:id="btnSalCal" layoutX="1150.0" layoutY="120.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" text="계산">
+			<font>
+				<Font size="17.0" />
+			</font>
+		</Button>
+		<Button fx:id="btnSalInit" layoutX="1300.0" layoutY="120.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0"
+			text="초기화">
+			<font>
+				<Font size="17.0" />
+			</font>
+		</Button>
+		<Button fx:id="btnSalOk" layoutX="1150.0" layoutY="198.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0"
+			text="DB등록">
+			<font>
+				<Font size="17.0" />
+			</font>
+		</Button>
+		<Button fx:id="btnSalEdit" layoutX="1300.0" layoutY="198.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0"
+			text="DB수정">
+			<font>
+				<Font size="17.0" />
+			</font>
+		</Button>
+		<Button fx:id="btnSalDelete" layoutX="1450.0" layoutY="198.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0"
+			text="DB삭제">
+			<font>
+				<Font size="17.0" />
+			</font>
+		</Button>
+		<Button fx:id="btnSalBar" layoutX="1150.0" layoutY="275.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0"
+			text="바 차트">
+			<font>
+				<Font size="17.0" />
+			</font>
+		</Button>
+		<Button fx:id="btnSalTotal" layoutX="1300.0" layoutY="275.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" text="통계">
+			<font>
+				<Font size="17.0" />
+			</font>
+		</Button>
+		<Button fx:id="btnSalCancel" layoutX="1450.0" layoutY="275.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" text="닫기">
+			<font>
+				<Font size="17.0" />
+			</font>
+		</Button>
+
+		<TextField fx:id="txtSalSearch" layoutX="25.0" layoutY="345"
+			prefHeight="20.0" prefWidth="120.0" promptText="이름" />
+
+		<Button fx:id="btnSalSearch" layoutX="145" layoutY="345"
+			mnemonicParsing="false" text="검색" />
+
+		<TableView fx:id="tvSal" layoutX="25.0" layoutY="375.0"
+			prefHeight="250.0" prefWidth="1550.0">
+		</TableView>
+		<Label alignment="CENTER" layoutX="530.0" layoutY="90.0"
+			prefHeight="25.0" prefWidth="80.0" text="선택 사원">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="470.0" layoutY="120.0" prefHeight="25.0"
+			prefWidth="80.0" text="사원코드">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<TextField fx:id="txtSalCode" layoutX="550.0"
+			layoutY="120.0" prefHeight="25.0" prefWidth="125.0" />
+		<TextField fx:id="txtSalName" layoutX="550.0"
+			layoutY="150.0" prefHeight="25.0" prefWidth="125.0" />
+		<TextField fx:id="txtSalRrnum" layoutX="470.0"
+			layoutY="210.0" prefHeight="25.0" prefWidth="205.0" />
+		<TextField fx:id="txtSalJoin" layoutX="550.0"
+			layoutY="240.0" prefHeight="25.0" prefWidth="125.0" />
+		<TextField fx:id="txtSalResign" layoutX="550.0"
+			layoutY="270.0" prefHeight="25.0" prefWidth="125.0" />
+		<Label layoutX="470.0" layoutY="150.0" prefHeight="25.0"
+			prefWidth="80.0" text="사원명">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="470.0" layoutY="180.0" prefHeight="25.0"
+			prefWidth="80.0" text="주민번호">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="470.0" layoutY="240.0" prefHeight="25.0"
+			prefWidth="80.0" text="입사년월일">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="470.0" layoutY="270.0" prefHeight="25.0"
+			prefWidth="80.0" text="퇴사년월일">
+			<font>
+				<Font size="15.0" />
+			</font>
+		</Label>
+
+	</children>
+</AnchorPane>
